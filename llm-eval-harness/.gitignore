@@ -1,0 +1,6 @@
+node_modules
+.cache
+runs/*.json
+!runs/baseline.json
+!runs/live-baseline.json
+.env

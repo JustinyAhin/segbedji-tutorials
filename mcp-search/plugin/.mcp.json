@@ -1,0 +1,8 @@
+{
+	"mcpServers": {
+		"tiny-book-finder": {
+			"type": "http",
+			"url": "https://books.example.com/mcp"
+		}
+	}
+}

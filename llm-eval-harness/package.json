@@ -1,0 +1,18 @@
+{
+	"name": "tutorial-llm-eval-harness",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"eval": "bun src/cli.ts",
+		"eval:mock": "bun src/cli.ts --mock --model mock/steady --baseline runs/baseline.json",
+		"validate": "bun scripts/validate-cases.ts",
+		"validate:online": "bun scripts/validate-cases.ts --online",
+		"catalog": "bun scripts/build-catalog.ts",
+		"test": "bun test",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@types/bun": "1.3.11",
+		"typescript": "5.9.3"
+	}
+}

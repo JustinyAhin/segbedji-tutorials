@@ -1,0 +1,7 @@
+{
+	"name": "tiny-book-finder",
+	"version": "0.1.0",
+	"description": "Find public-domain books from remembered plot, characters, or setting.",
+	"homepage": "https://books.example.com",
+	"mcpServers": "./.mcp.json"
+}

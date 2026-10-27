@@ -1,0 +1,35 @@
+{
+	"model": "mock/steady",
+	"fixtureHash": "d0e6a3f08ffd145a9d9eb2a20f74713f92a771be6cfca490d3d237b76fd02036",
+	"summary": {
+		"cases": 16,
+		"answerable": 14,
+		"failures": 0,
+		"skipped": 0,
+		"p1": 0.8571428571428571,
+		"p5": 1,
+		"mrr": 0.9285714285714286,
+		"emptyAnswers": 0,
+		"correctAbstentions": 2,
+		"unanswerable": 2,
+		"costUsd": 0.0056375,
+		"unbilledCalls": 0,
+		"byDifficulty": {
+			"easy": {
+				"cases": 7,
+				"p1": 1,
+				"p5": 1
+			},
+			"medium": {
+				"cases": 5,
+				"p1": 1,
+				"p5": 1
+			},
+			"hard": {
+				"cases": 2,
+				"p1": 0,
+				"p5": 1
+			}
+		}
+	}
+}

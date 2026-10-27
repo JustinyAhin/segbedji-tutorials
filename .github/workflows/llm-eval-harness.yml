@@ -1,0 +1,29 @@
+name: llm-eval-harness
+
+on:
+  pull_request:
+    paths: ['llm-eval-harness/**']
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: llm-eval-harness
+    env:
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
+      - run: bun run validate
+      - run: bun test
+      # Always runs: proves the harness and the gate still work, at no cost.
+      - run: bun run eval:mock
+      # Only runs when the repo has a key and a committed live baseline
+      # (create one with --save-baseline on your production model).
+      # The cap keeps a bad change from burning money.
+      - if: ${{ env.OPENROUTER_API_KEY != '' && hashFiles('llm-eval-harness/runs/live-baseline.json') != '' }}
+        run: >
+          bun run eval --model openai/gpt-5.4-mini --max-cost 0.05
+          --baseline runs/live-baseline.json --max-p1-drop 0.05 --max-failures 0

@@ -1,0 +1,2 @@
+# Copy to .dev.vars to run the production build with `bun run preview`.
+MCP_ALLOWED_HOST=localhost:8787

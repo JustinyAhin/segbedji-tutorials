@@ -1,0 +1,8 @@
+{
+	"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+	"name": "tiny-book-finder",
+	"version": "0.1.0",
+	"description": "Find public-domain books from remembered plot, characters, or setting, with Project Gutenberg links.",
+	"homepage": "https://books.example.com",
+	"keywords": ["books", "book-finder"]
+}
